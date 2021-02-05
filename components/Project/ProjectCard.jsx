@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import Link from 'next/link'
-import Image from 'next/image'
 import Heading3 from '@components/Heading/Heading3'
 
 const ProjectCard = (props) => (
@@ -31,7 +30,7 @@ const ScProjectCard = styled.div`
   margin-bottom: 24px;
 `
 
-const ScImage = styled(Image)`
+const ScImage = styled.img`
   width: 320px;
   height: 240px;
   border-radius: 24px;
