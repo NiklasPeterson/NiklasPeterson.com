@@ -4,17 +4,20 @@ import ReactMarkdown from 'react-markdown'
 
 import Layout from '@components/Layout'
 import getSlugs from '@utils/getSlugs'
+import Nav from '@components/Nav'
 
 export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
   if (!frontmatter) return <></>
 
   return (
     <Layout pageTitle={`${siteTitle} | ${frontmatter.title}`}>
-      <Link href="/blog">
+      <Nav />
+      <Link href="/work">
         <a>Back to post list</a>
       </Link>
       <article>
         <h1>{frontmatter.title}</h1>
+        <img src={frontmatter.thumbnail} />
         <p>By {frontmatter.author}</p>
         <div>
           <ReactMarkdown source={markdownBody} />
@@ -27,7 +30,7 @@ export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
 export async function getStaticProps({ ...ctx }) {
   const { postname } = ctx.params
 
-  const content = await import(`../../posts/${postname}.md`)
+  const content = await import(`../../content/work/${postname}.md`)
   const config = await import(`../../siteconfig.json`)
   const data = matter(content.default)
 
@@ -43,12 +46,12 @@ export async function getStaticProps({ ...ctx }) {
 export async function getStaticPaths() {
   const blogSlugs = ((context) => {
     return getSlugs(context)
-  })(require.context('../../posts', true, /\.md$/))
+  })(require.context('../../content/work', true, /\.md$/))
 
   const paths = blogSlugs.map((slug) => `/post/${slug}`)
 
   return {
     paths,
-    fallback: false,
+    fallback: false, // constrols whether not predefined paths should be processed on demand, check for more info: https://nextjs.org/docs/basic-features/data-fetching#the-fallback-key-required
   }
 }

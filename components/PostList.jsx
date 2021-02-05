@@ -1,4 +1,6 @@
-import Link from 'next/link'
+import styled from 'styled-components'
+import ProjectCard from '@components/Project/ProjectCard'
+import ProjectContainer from './Project/ProjectContainer'
 
 export default function PostList({ posts }) {
   if (posts === 'undefined') return null
@@ -6,18 +8,21 @@ export default function PostList({ posts }) {
   return (
     <div>
       {!posts && <div>No posts!</div>}
-      <ul>
+      <ProjectContainer>
         {posts &&
           posts.map((post) => {
             return (
-              <li key={post.slug}>
-                <Link href={{ pathname: `/post/${post.slug}` }}>
-                  <a>{post.frontmatter.title}</a>
-                </Link>
-              </li>
+              <ProjectCard
+                key={post.slug}
+                title={post.frontmatter.title}
+                thumbnail={post.frontmatter.thumbnail}
+                description={post.frontmatter.description}
+                link={{ pathname: `/post/${post.slug}` }}
+                linkText={post.frontmatter.linkText}
+              />
             )
           })}
-      </ul>
+      </ProjectContainer>
     </div>
   )
 }

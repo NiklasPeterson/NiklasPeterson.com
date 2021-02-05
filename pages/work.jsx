@@ -3,14 +3,16 @@ import getPosts from '@utils/getPosts'
 import Layout from '@components/Layout'
 import PostList from '@components/PostList'
 import Nav from '@components/Nav'
+import Header from '@components/Header'
 
 const Blog = ({ posts, title, description, ...props }) => {
   return (
-    <Layout pageTitle={`${title} | Blog`} description={description}>
+    <Layout pageTitle={`${title} | Work`} description={description}>
       <Nav />
-      <h1 className="title">Welcome to my Blog!</h1>
 
-      <p className="description">{description}</p>
+      <Header heading="Niklas Peterson" tagline="Designer." />
+
+      <p>{description}</p>
 
       <PostList posts={posts} />
     </Layout>
@@ -24,7 +26,7 @@ export async function getStaticProps() {
 
   const posts = ((context) => {
     return getPosts(context)
-  })(require.context('../posts', true, /\.md$/))
+  })(require.context('../content/work', true, /\.md$/))
 
   return {
     props: {
