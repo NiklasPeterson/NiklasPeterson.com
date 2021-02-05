@@ -6,12 +6,12 @@ const Nav = (props) => {
     <ScNav>
       <ScNavItem>
         <Link href="/">
-          <a>Home</a>
+          <a>About</a>
         </Link>
       </ScNavItem>
       <ScNavItem>
-        <Link href="/blog">
-          <a>Blog</a>
+        <Link href="/work">
+          <a>Work</a>
         </Link>
       </ScNavItem>
     </ScNav>
@@ -22,6 +22,9 @@ export default Nav
 
 const ScNav = styled.nav`
   display: flex;
+  position: absolute;
+  top: 24px;
+  right: 24px;
 `
 
 const ScNavItem = styled.div`

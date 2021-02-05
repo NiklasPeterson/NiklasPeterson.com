@@ -7,6 +7,7 @@ import ListItem from '@components/List/ListItem'
 import Link from '@components/Link'
 import Layout from '@components/Layout'
 import Header from '@components/Header'
+import Nav from '@components/Nav'
 
 export default function Home(props) {
   return (
@@ -19,7 +20,8 @@ export default function Home(props) {
       twitterLink={props.twitter}
       instagramLink={props.instagram}
     >
-      <Header />
+      <Nav />
+      <Header heading="Niklas Peterson" tagline="Designer." />
       <Article>
         <Heading2
           text="Niklas Peterson is a designer who focuses on UI

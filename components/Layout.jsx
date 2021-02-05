@@ -120,6 +120,7 @@ const ScPageWrapper = styled.div`
   }
 `
 const ScLayout = styled.main`
+  position: relative;
   width: 50vw;
   height: 100vh;
   display: flex;
