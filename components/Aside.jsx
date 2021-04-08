@@ -15,7 +15,7 @@ const ScAside = styled.aside`
 
   @media (max-width: 812px) {
     position: fixed;
-    z-index: -1;
+    z-index: var(--below);
     width: 100vw;
 
     &:after {
