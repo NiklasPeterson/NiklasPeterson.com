@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Head from 'next/head'
 
-import Aside from '@components/Aside'
+import Aside from '@/components/Aside'
 
 export default function Layout(props) {
   return (

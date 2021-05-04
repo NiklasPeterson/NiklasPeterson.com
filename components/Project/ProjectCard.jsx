@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import Link from 'next/link'
-import Heading3 from '@components/Heading/Heading3'
+import Heading3 from '@/components/Heading/Heading3'
 
 const ProjectCard = (props) => (
   <ScProjectCard>

@@ -1,9 +1,9 @@
-import getPosts from '@utils/getPosts'
+import getPosts from '@/utils/getPosts'
 
-import Layout from '@components/Layout'
-import PostList from '@components/PostList'
-import Nav from '@components/Nav'
-import Header from '@components/Header'
+import Layout from '@/components/Layout'
+import PostList from '@/components/PostList'
+import Nav from '@/components/Nav'
+import Header from '@/components/Header'
 
 const Blog = ({ posts, title, description, ...props }) => {
   return (

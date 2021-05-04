@@ -1,13 +1,13 @@
-import Heading2 from '@components/Heading/Heading2'
-import Article from '@components/Article'
-import Copyright from '@components/Copyright'
-import Footer from '@components/Footer'
-import List from '@components/List/List'
-import ListItem from '@components/List/ListItem'
-import Link from '@components/Link'
-import Layout from '@components/Layout'
-import Header from '@components/Header'
-import Nav from '@components/Nav'
+import Heading2 from '@/components/Heading/Heading2'
+import Article from '@/components/Article'
+import Copyright from '@/components/Copyright'
+import Footer from '@/components/Footer'
+import List from '@/components/List/List'
+import ListItem from '@/components/List/ListItem'
+import Link from '@/components/Link'
+import Layout from '@/components/Layout'
+import Header from '@/components/Header'
+import Nav from '@/components/Nav'
 
 export default function Home(props) {
   return (

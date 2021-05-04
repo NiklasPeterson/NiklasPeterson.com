@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import ProjectCard from '@components/Project/ProjectCard'
+import ProjectCard from '@/components/Project/ProjectCard'
 import ProjectContainer from './Project/ProjectContainer'
 
 export default function PostList({ posts }) {
