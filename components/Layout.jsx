@@ -133,7 +133,7 @@ const ScLayout = styled.main`
   @media (max-width: 812px) {
     width: 100vw;
     height: auto;
-    z-index: 1;
+    z-index: var(--above);
   }
 `
 

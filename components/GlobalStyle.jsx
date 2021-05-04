@@ -31,6 +31,10 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 	--color-highlight: #333;
 	--color-link: var(--color-text);
 	--color-link-hover: #111;
+
+	--base : 0;
+	--above : 1;
+	--below : -1;
 }
 
 @media (prefers-color-scheme: dark) {
